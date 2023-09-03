@@ -72,7 +72,8 @@ void main() {
     printf("%c %d\n", p5->gender, p5->age);
     printf("%c %d\n", (*p5).gender, (*p5).age);
     printf("%c %d\n", p5[0].gender, p5[0].age);
-
+    printf("===========================\n");
+    
     /*
         6. 구조체 배열과 1차원 구조체 포인터
     */
