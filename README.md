@@ -16,3 +16,6 @@
 13. 함수
 14. STATIC 변수
 15. 재귀함수
+16. string.h 함수
+17. math.h 함수
+18. stdlib.h 함수
