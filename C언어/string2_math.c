@@ -13,9 +13,9 @@ void main() {
     /*
         strrev : 문자열 뒤집기
     */
-    // char a2[20] = "Hello";
-    // strrev(a2);
-    // printf("%s\n", a2);
+    char a2[20] = "Hello";
+    strrev(a2);
+    printf("%s\n", a2);
     printf("======================\n");
 
     /*
