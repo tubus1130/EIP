@@ -7,6 +7,7 @@ class Main {
     public static void main(String[] args) {
         int p = 0;
         for(int i=2; i<100; i++){
+            // Math.sqrt(i) = 루트i
             int t = (int)Math.sqrt(i);
             for(int j = 2; j<=t; j++){
                 if(i%j == 0){
