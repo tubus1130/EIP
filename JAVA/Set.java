@@ -1,5 +1,5 @@
 import java.util.*;
-public class test {
+public class Main {
 	
 	public static void main(String[] args){
     // HashSet
