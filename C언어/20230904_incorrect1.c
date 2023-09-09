@@ -17,3 +17,4 @@ void main(){
         printf("h[%d] = %d\n", i, hist[i]);
     }
 }
+//
