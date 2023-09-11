@@ -1,0 +1,10 @@
+1. COCOMO의 소프트웨어 개발유형<오세임>
+- Organic mode(조직형)
+- Semi-Detached mode(반분리형)
+- Embedded mode(내장형)
+
+2. 위험 대응 전략<회전완수>
+- 회피
+- 전가
+- 완화
+- 수용
