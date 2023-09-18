@@ -50,3 +50,32 @@
 - 완전성
 - 명확성
 - 일관성
+
+9. 생성패턴 <ABFPS>
+- Abstract Factory
+- Builder
+- Factory Method
+- Prototype
+- Singleton
+
+10. 구조패턴 <ABCDFFP>
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Flyweight
+- Facade
+- Proxy
+
+11. 행위패턴 <미인이 템옵 스테 비커 스트 메체>
+- 미디에이터(중재자)
+- 인터프리터
+- 이터레이터(반복자)
+- 템플릿메서드
+- 옵저버
+- 스테이트(상태)
+- 비지터(방문자)
+- 커맨드
+- 스트레트지(전략)
+- 메멘토
+- 체인오브리스폰시빌리티(책임연쇄)
