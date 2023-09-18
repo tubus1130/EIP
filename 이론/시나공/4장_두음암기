@@ -36,3 +36,17 @@
 - 시간적 응집도
 - 논리적 응집도
 - 우연적 응집도
+
+7. IPC 메소드 <3S PM>
+- Shared Memory
+- Socket
+- Semaphores
+- Pipes & named Pipes
+- Message Queueing
+
+8. 공통모듈 명세기법의 종류 <추정 완명일>
+- 추적성
+- 정확성
+- 완전성
+- 명확성
+- 일관성
