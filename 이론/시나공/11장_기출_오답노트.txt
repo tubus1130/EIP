@@ -1,0 +1,11 @@
+1. Windows에서 dir명령어의 기능
+- 현재 디렉터리의 파일목록을 표시
+
+2. UNIX에서 현재 시스템의 프로세스와 메모리 사용 현황을 표시할 때 사용하는 명령어
+- top
+
+3. Windows의 명령프롬프트에서 C드라이브에 있는 file1.txt 파일을 file2.txt로 이름을 변경하여 D드라이브로 이동하는 명령문을 작성하시오
+- move file1.txt D:\file2.txt
+
+4. Windows의 명령프롬프트에서 file.txt 파일의 내용 중 '가나다' 문자열을 찾는 명령문
+- find "가나다" file.txt
