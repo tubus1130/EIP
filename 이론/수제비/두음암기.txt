@@ -67,3 +67,22 @@
 - 가독성
 - 중복성 제거
 - 의존성 최소
+
+12. 메모리 관리 기법 <반배할교>
+- 반입기법
+- 배치기법
+- 할당기법
+- 교체기법
+
+13. 선점형 스케줄링 알고리즘 <SMR>
+- SRT
+- Multi-Level Queue
+- Multi-Level Feedback Queue
+- Round Robin
+
+14. 비선점형 스케줄링 알고리즘 <우기 FHS(풀하우스)>
+- 우선순위
+- 기한부
+- FCFS
+- HRN
+- SJF
