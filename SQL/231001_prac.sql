@@ -88,3 +88,25 @@ WHERE 연락번호 IS NOT NULL;
 SELECT 이름
 FROM 직원
 WHERE 팀코드 = (SELECT 팀코드 FROM 직원 WHERE 이름 = '정도일');
+
+SELECT 학과, COUNT(*) AS 학과별튜플수
+FROM 학생
+GROUP BY 학과;
+
+SELECT 과목이름, MIN(점수) AS 최소점수, MAX(점수) AS 최대점수
+FROM 성적
+GROUP BY 과목이름
+HAVING AVG(점수) >= 90;
+
+SELECT SUM(psale)
+FROM Sale
+WHERE pid IN (SELECT id FROM Product WHERE 상품명 LIKE 'USB%');
+
+SELECT 소속도시, AVG(매출액)
+FROM 지점정보
+WHERE 매출액 > 1000
+GROUP BY 소속도시
+HAVING COUNT(*) >= 3;
+
+SELECT 장학내역, 장학금, ROW_NUMBER() OVER (PARTITION BY 장학내역 ORDER BY 장학금 DESC) AS NUM
+FROM 장학금
