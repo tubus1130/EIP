@@ -38,3 +38,19 @@ GRANT DELETE ON 강좌 TO 김하늘 WITH GRANT OPTION;
 REVOKE SELECT,INSERT,DELETE ON 교수 FROM 임꺽정;
 
 REVOKE UPDATE ON 수강 FROM 임꺽정 CASCADE;
+
+DELETE FROM 학생 WHERE 이름 = '민수';
+
+INSERT INTO 학생(학번, 성명, 학년, 과목, 연락처)
+VALUES (98170823, '한국산', 3, '경영학개론', '?-1234-1234');
+
+DELETE FROM 학생 WHERE 이름 = 'Scott';
+
+UPDATE 학부생 SET 학과번호 = 999 WHERE 입학생수 >= 300;
+
+UPDATE 사원 SET 연봉 = 연봉 + 100000 WHERE 직급 = '차장';
+
+INSERT INTO 기획부(성명, 경력, 주소, 기본급)
+SELECT 성명, 경력, 주소, 기본급
+FROM 사원
+WHERE 부서 = '기획';
