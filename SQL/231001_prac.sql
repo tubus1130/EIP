@@ -110,3 +110,16 @@ HAVING COUNT(*) >= 3;
 
 SELECT 장학내역, 장학금, ROW_NUMBER() OVER (PARTITION BY 장학내역 ORDER BY 장학금 DESC) AS NUM
 FROM 장학금
+
+SELECT 학번, 이름, 학과.학과코드, 학과.학과명
+FROM 학생, 학과
+WHERE 학생.학과코드 = 학과.학과코드;
+
+SELECT 학번, 이름, 학생.학과코드, 학과명
+FROM 학생 NATURAL JOIN 학과;
+
+SELECT 학번, 이름, 학생.학과코드, 학과명
+FROM 학생 JOIN 학과 USING(학과코드);
+
+SELECT 사원.코드, 이름, 동아리명
+FROM 사원 LEFT OUTER JOIN 동아리 ON 사원.코드 = 동아리.코드;
