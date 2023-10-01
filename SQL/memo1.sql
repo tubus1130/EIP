@@ -35,3 +35,12 @@ DROP TABLE 테이블명;
 DROP VIEW 뷰명;
 DROP INDEX 인덱스명;
 DROP CONSTRAINT 제약조건명;
+
+-- 권한
+GRANT 권한리스트 ON 테이블 TO 사용자 [WITH GRANT OPTION];
+REVOKE [GRANT OPTION FOR] 권한리스트 ON 테이블 FROM 사용자 [CASCADE];
+/*
+  GRANT OPTION FOR : 다른 사용자에게 권한을 부여할 수 있는 권한을 취소함
+  CASCADE : 권한 취소시 권한을 부여받았던 사용자가 다른 사용자에게 부여한 권한도 연쇄적으로 취소함
+*/
+
