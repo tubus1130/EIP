@@ -107,3 +107,14 @@ ON 테이블1.속성 = 테이블2.속성;
 SELECT *
 FROM 테이블1, 테이블2
 WHERE 테이블1.속성 = 테이블2.속성(+);
+
+-- 트리거
+CREATE TRIGGER 트리거명 [동작옵션] ON 테이블명
+REFERENCING [NEW/OLD] AS 테이블명
+FOR EACH ROW
+[WHEN(조건식)]
+BEGIN
+  SQL문
+END;
+
+DROP TRIGGER 트리거명;
