@@ -44,3 +44,16 @@ REVOKE [GRANT OPTION FOR] 권한리스트 ON 테이블 FROM 사용자 [CASCADE];
   CASCADE : 권한 취소시 권한을 부여받았던 사용자가 다른 사용자에게 부여한 권한도 연쇄적으로 취소함
 */
 
+-- 삽입문
+INSERT INTO 테이블명(속성명1, 속성명2, ...)
+VALUES (데이터1, 데이터2, ...);
+
+-- 삭제문
+DELETE FROM 테이블명
+[WHERE 조건];
+
+-- 갱신문
+UPDATE 테이블명
+SET 속성명 = 데이터
+[WHERE 조건];
+
