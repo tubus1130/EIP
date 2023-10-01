@@ -57,3 +57,31 @@ UPDATE 테이블명
 SET 속성명 = 데이터
 [WHERE 조건];
 
+-- WINDOW 함수
+SELECT 속성1, 속성2, ROW_NUMBER() OVER (PARTITION BY 속성 ORDER BY 속성 DESC) AS 속성3
+FROM 테이블명;
+/*
+  ROW_NUMBER() : 일련번호
+  RANK() : 공동순위 반영 => 1224
+  DENSE_RANK() : 공동순위 미반영 => 1223
+*/
+
+-- GROUP BY
+SELECT 컬럼명 --------------------- (5) 
+FROM 테이블명 ------------------- (1)
+WHERE 테이블 조건 --------------- (2)
+GROUP BY 컬럼명 -------------------- (3)
+HAVING 그룹 조건 ----------------- (4)
+ORDER BY 컬럼명 -------------------- (6)
+
+-- ROLLUP, CUBE
+SELECT
+FROM
+GROUP BY ROLLUP(속성1, 속성2);
+-- 속성1에 대한 소계, 전체에 대한 소계
+SELECT
+FROM
+GROUP BY CUBE(속성1, 속성2);
+-- 속성1, 속성2에 대한 소계, 전체에 대한 소계
+
+-- UNION, UNION ALL, INTERSECT, EXCEPT
