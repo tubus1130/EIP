@@ -54,3 +54,37 @@ INSERT INTO 기획부(성명, 경력, 주소, 기본급)
 SELECT 성명, 경력, 주소, 기본급
 FROM 사원
 WHERE 부서 = '기획';
+
+SELECT name, score
+FROM 성적
+ORDER BY score DESC;
+
+SELECT *
+FROM 회원
+WHERE 이름 LIKE '이%'
+ORDER BY 가입일 DESC;
+
+SELECT pid
+FROM Sale
+WHERE psale BETWEEN 10 AND 20;
+
+SELECT A.학번 AS 학번, A.이름 AS 이름, C.결제여부 AS 결제여부
+FROM 학생정보 A, 신청정보 B, 결제 C
+WHERE 학생정보.학번 = 신청정보.학번 AND 신청정보.신청번호 = 결제.신청번호 AND 신청정보.신청과목='OpenGL';
+
+SELECT ID, NAME
+FROM CUSTOMER;
+
+SELECT DISTINCT GRADE FROM CUSTOMER;
+
+SELECT * FROM CUSTOMER ORDER BY ID DESC;
+
+SELECT NAME FROM CUSTOMER WHERE AGE IS NULL;
+
+SELECT 사원명
+FROM 회사원
+WHERE 연락번호 IS NOT NULL;
+
+SELECT 이름
+FROM 직원
+WHERE 팀코드 = (SELECT 팀코드 FROM 직원 WHERE 이름 = '정도일');
