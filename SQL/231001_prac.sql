@@ -30,3 +30,11 @@ CREATE VIEW CC(ccid, ccname, instname) AS
 CREATE UNIQUE INDEX Stud_idx ON Student(ssn ASC);
 
 CREATE INDEX 직원_name ON 직원(이름);
+
+GRANT ALL ON 학생 TO 김하늘;
+
+GRANT DELETE ON 강좌 TO 김하늘 WITH GRANT OPTION;
+
+REVOKE SELECT,INSERT,DELETE ON 교수 FROM 임꺽정;
+
+REVOKE UPDATE ON 수강 FROM 임꺽정 CASCADE;
