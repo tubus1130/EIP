@@ -85,3 +85,25 @@ GROUP BY CUBE(속성1, 속성2);
 -- 속성1, 속성2에 대한 소계, 전체에 대한 소계
 
 -- UNION, UNION ALL, INTERSECT, EXCEPT
+
+-- JOIN
+SELECT *
+FROM 테이블1, 테이블2
+WHERE 테이블1.속성 = 테이블2.속성;
+
+SELECT *
+FROM 테이블1 NATURAL JOIN 테이블2;
+
+SELECT *
+FROM 테이블1 JOIN 테이블2 USING(속성);
+
+-- LEFT OUTER JOIN(왼쪽테이블 값 다나옴)
+-- RIGHT OUTER JOIN(오른쪽테이블 값 다나옴)
+-- FULL OUTER JOIN(양쪽테이블 값 다나옴)
+SELECT *
+FROM 테이블1 LEFT OUTER JOIN 테이블2
+ON 테이블1.속성 = 테이블2.속성;
+
+SELECT *
+FROM 테이블1, 테이블2
+WHERE 테이블1.속성 = 테이블2.속성(+);
