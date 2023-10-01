@@ -123,3 +123,71 @@ FROM 학생 JOIN 학과 USING(학과코드);
 
 SELECT 사원.코드, 이름, 동아리명
 FROM 사원 LEFT OUTER JOIN 동아리 ON 사원.코드 = 동아리.코드;
+
+DROP TABLE 직원;
+
+CREATE TABLE 직원(
+  사번 CHAR(15) PRIMARY KEY,
+  이름 CHAR(4) NOT NULL,
+  전화번호 CHAR(20) UNIQUE,
+  부서번호 CHAR(10) FOREIGN KEY REFERENCES 부서(부서번호),
+  경력 INT,
+  기본급 INT CHECK 기본급 >= 1000000
+);
+
+SELECT * FROM 사원;
+
+SELECT DISTINCT 이름
+FROM 자격증
+WHERE 경력 >= 3;
+
+SELECT 이름, 재직년도, 기본급
+FROM 사원
+WHERE 이름 NOT IN (SELECT DISTINCT 이름 FROM 자격증);
+
+SELECT 이름
+FROM 자격증
+GROUP BY 이름
+HAVING COUNT(*) >= 2;
+
+CREATE VIEW 3학년학생 AS (SELECT * FROM 학생 WHERE 학년 = 3 WITH CHECK OPTION);
+
+CREATE VIEW 강좌교수 AS
+SELECT 강좌명, 강의실, 수강인원 AS 수강제한인원, 이름 AS 교수이름
+FROM 강좌 A, 교수 B
+WHERE A.교수번호 = B.교수번호;
+
+GRANT SELECT ON 강좌 TO 홍길동;
+
+GRANT ALL ON 학생 TO 홍길동 WITH GRANT OPTION;
+
+REVOKE INSERT ON 교수 FROM 박문수;
+
+REVOKE SELECT ON 수강 FROM 박문수 CASCADE;
+
+DELETE FROM 상품 WHERE 제품코드 = 'P-20';
+
+INSERT INTO 상품 VALUES ('P-20', 'PLAYER', 8800, 6600);
+
+SELECT 상호, 총액
+FROM 거래내역
+WHERE 총액 IN (SELECT MAX(총액) FROM 거래내역);
+
+SELECT 장학내역, 학과, AVG(장학금) AS 장학금평균
+FROM 장학금
+GROUP BY CUBE(장학내역, 학과);
+
+SELECT 지원ID, 이름, 지원학과, 연락처
+FROM 지원자
+WHERE 점수 >= 60
+ORDER BY 지원학과 ASC, 점수 DESC;
+
+ALTER TABLE 학생 ADD 주소 CHAR(20);
+
+SELECT *
+FROM 공급자
+WHERE 공급자명 LIKE '%신%';
+
+UPDATE 성적
+SET 점수 = 점수 + 10
+WHERE 이름 = 'LEE';
