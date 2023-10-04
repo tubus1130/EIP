@@ -29,6 +29,8 @@ print(str[-5:-1:2]) # 35
 print(str[1:5:1]) # 1234
 print(str[5:1:-1]) # 5432
 
+
+# 내용정리<10/4>
 print(str[1:]) # 1234567
 print(str[-2:]) # 67
 print(str[:4]) # 0123
@@ -40,9 +42,6 @@ print(str[:-3:-1]) # 76
 print(str[1::2]) # 1357
 print(str[:3:1]) # 012
 print(str[-1::1]) # 7
-
-
-# 내용정리<10/4>
 print("========================")
 print(str[1:3]) # 12
 print(str[-3:-1]) # 56
